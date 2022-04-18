@@ -1,0 +1,35 @@
+//Document object model//
+whole website refers as a doucument
+targeting the elements ==>by tag name,class name ,by id
+document.getElementsByclasss//elements represents all the classes inthepage 
+document.getElementsByTag//elements represents all the Tags inthepage 
+document.getElementById//Id represents the unique id
+
+//targeting elements 
+document.getElementsByClassName('aboutme')
+HTMLCollection []length: 0[[Prototype]]: HTMLCollection
+document.getElementsByTagName('h1')[0]//[0] represents the index value
+<h1 id=​"top">​SATHEESH M​</h1>​
+document.getElementsByTagName('h1')[1]
+undefined
+
+
+TO CHANGE THE INNER TEXT
+
+document.getElementsByTagName('h1')[0]
+<h1 id=​"top">​SATHEESH M​</h1>​
+document.getElementsByTagName('h1')[0].innerHTML
+'SATHEESH M'
+document.getElementsByTagName('h1')[0].innerHTML="I am a developer"
+'I am a developer'
+
+document.getElementsByTagName('h1')[0]
+<h1 id=​"top">​SATHEESH M​</h1>​
+document.getElementsByTagName('h1')[0].innerHTML
+'SATHEESH M'
+document.getElementsByTagName('h1')[0].innerHTML="I am a developer"
+'I am a developer'
+document.getElementsByTagName('h1')[0].style.color="red"
+'red'
+document.getElementsByTagName('h1')[0].style.beckgroundcolor="blue"
+'blue'//we can manipulate our html and css with the help of java script is called DOM manipulation

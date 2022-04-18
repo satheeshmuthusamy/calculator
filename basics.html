@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <h1>ALERT,CONSOLE,PROMPT(),CONFORM()</h1>
+    <script>
+//console.log==>for debugging 
+//alert()==>For Notification
+//confirm()==>check weather yes or no condition
+//prompt==>takes user Input
+confirm EX:
+confirm('Do you want to leave?')
+true
+confirm('Do you want to leave?')
+false
+var a = confirm('Do you want to leave?')
+undefined
+a
+true
+var a = confirm('Do you want to leave?')
+undefined
+a
+false//output is always in a form of string
+prompt()==>to take user input
+prompt('waht is your name?')
+'Satheesh M'
+prompt('What is your age?')
+'23'
+prompt('What is your profession?')
+'Web developer'//output will be always in string format and
+var a = prompt('Enter first Number')//15
+var b = prompt('Enter second Number')14
+alert(a+b)//op will be '1514'==>string op
+var a = prompt('Enter first Number')//14
+var b = prompt('Enter second Number')//15
+alert(Number(a)+Number(b))//==>op will be 29
+
+console.log()==>for output
+var a = prompt('Enter first Number')
+var b = prompt('Enter second Number')
+console.log(Number(a)+Number(b))
+50//op will be displayed
+
+
+STRING LITERAL 
+
+var name = "thor";
+var ind ="Hollywood";
+var type ="Action";
+var rating="4.4";
+//ES5 type 
+var a = "A "+name+" is"+ind +" "+type+" "+movie "+"with the rating of "+rating +"."
+'A thor is Hollywood Action movie with the rating of 4.4.
+
+//es 6
+var a = `An ${name} is an ${ind} ${type} movie with the rating of ${rating}.`//syntax is better and smaller.
+'An thor is an Hollywood Action movie with the rating of 4.4.'//
+</script>
+
+</body>
+</html>
