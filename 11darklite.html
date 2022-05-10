@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>dark&lite</title>
+        <style>
+            body{
+                background-color: white;
+                color:black;
+            }
+            .mydark{
+                background-color: black;
+                color:white; 
+            }
+        </style>
+        <script>
+            function changemode(){
+                let mybody=document.body;
+                mybody.classList.toggle('mydark');
+            }
+        </script>
+    </head>
+    <body class="mydark">
+        <h1>dark and light mode</h1>
+        <button onClick="changemode()">change mode</button>
+    </body>
+</html>

@@ -1,3 +1,6 @@
+function alert(){
+   console.log("Welcome to js");
+}
 function calc(opt){
     let a = document.getElementById("first").value;//.value is to store the value
      let b = document.getElementById("second").value;

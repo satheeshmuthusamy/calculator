@@ -1,0 +1,16 @@
+#coupen{
+    height: 256px;
+    background-color:orange;
+    width: 304px;
+    margin: auto;
+    /* visibility: hidden;hides the content but occupies the display */
+    /* visibility: none;hides the content and also not occupies the display; */
+    display: none;
+    z-index: 1;
+    position: absolute;
+    margin-left: 38%;
+}
+#cbutton{
+    margin-left: 92%;
+    margin-top: -22%;
+}
