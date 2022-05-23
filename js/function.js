@@ -46,3 +46,14 @@ ES6;
 let add=(a,b)=>{return a+b}
 add(1,9)
 10//es6 syntax
+
+///rest
+function add(...args){//...agrs used to give n number of inputs
+    let out=0;
+    for(data of args){
+        out+=data;
+    }
+    return out;
+}
+add(1,2,3,4,5)//it canbe used for all operations
+15//out 

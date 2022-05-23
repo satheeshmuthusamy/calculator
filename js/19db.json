@@ -1,0 +1,13 @@
+[
+    {
+       "Name":"DDLJ",
+       "Industry":"Bollywood",
+       "Rating":4  
+    },
+    {
+       "Name":"Dhoom",
+       "Industry":"Bollywood",
+       "Rating":4.3,
+       "type":"Action"
+    }
+]//json format of data,It might be unsymmetry

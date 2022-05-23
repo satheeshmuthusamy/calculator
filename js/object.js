@@ -61,3 +61,30 @@ Name
 Industry
 Rating//key values in object
 
+//to print values in objects
+var movie ={//movie is the object
+    Name:"DDLJ",
+    Industry:"Bollywood",
+    Rating:4,//all the details inside the object is known as Value of the object
+}
+for(key in movie){
+    console.log(movie['key'])
+}
+DDLJ
+ Bollywood
+ 4
+
+ //json==>Javascript object notation==>way to represent the data
+ //Array of object is referred as JSON
+ let movie=[//array
+     {
+        Name:"DDLJ",//object 
+        Industry:"Bollywood",
+        Rating:4, 
+     },
+     {
+        Name:"Dhoom",//object
+        Industry:"Bollywood",
+        Rating:4.3,
+     },
+ ];
