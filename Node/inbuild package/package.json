@@ -1,0 +1,12 @@
+{
+    "name": "inbuild-package",
+    "version": "1.0.0",
+    "description": "This is node inbuild",
+    "main": "fs.js",
+    "scripts": {
+        "start": "node http.js",
+        "dev": "nodemon http.js"
+    },
+    "author": "SatheeshMDeveloper",
+    "license": "ISC"
+}

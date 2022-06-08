@@ -1,0 +1,9 @@
+db.orders.insert([{
+    "_id": "78787696",
+    "id": "62975496c3deeb1720273102",
+    "user_name": "SatheeshM",
+    "email": "satheeshsathish1234@gmail.com",
+    "restaurant_name": "Street Foods By Punjab Grill",
+    "cost": "799",
+    "order_status": "delivered",
+}])

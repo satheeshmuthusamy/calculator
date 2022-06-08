@@ -1,0 +1,398 @@
+setup
+for mongoDB == > local
+search mongodb download
+choose os
+download mongo db
+
+
+setup file
+In C drive create one folder called 'data'
+
+Default port number - 27017# window >
+    in c drive create one folder 'data' >
+    inside data create one folder by name of 'db >
+c: \data\ db
+
+    >>>
+    >>>
+    Start server << << << << <<
+    >
+    open cmd >
+    go inside bin folder(c: \programmfile\ mongodb\ server\ 5.4\ bin) >
+    mongod >
+    do not close this cmd
+
+    >>>
+    >>>
+    Start Client << << << << <<
+    >
+    open cmd >
+    go inside bin folder(c: \programmfile\ mongodb\ server\ 5.4\ bin) >
+    mongo
+
+# mac / linux >
+    open terminal >
+    mkdir data / db
+
+    >>>
+    >>>
+    Start server << << << << <<
+    >
+    open terminal >
+    mongod--dbpath data / db >
+    do not close this cmd
+
+    >>>
+    >>>
+    Start Client << << << << <<
+    >
+    open terminal >
+    mongo
+
+    >>>
+    >>>
+    Compass(ui
+        for db)
+https: //www.mongodb.com/try/download/compass
+
+
+    >>>
+    >>
+    Live << << << << < (mongodb atlas)
+Sign up
+    >
+    https: //www.mongodb.com/cloud/atlas/register2?utm_content=rlsapostreg&utm_source=google&utm_campaign=gs_apac_rlsamulti_search_brand_dsa_atlas_desktop_rlsa_postreg&utm_term=&utm_medium=cpc_paid_search&utm_ad=&utm_ad_campaign_id=14412646494&adgroup=131761134692&gclid=Cj0KCQjwyYKUBhDJARIsAMj9lkFehy4NvBCeV5A-Yi1_MDepIEc_gLd2tnrVoMoLiE9ZR_DtqrSQohoaApX_EALw_wcB
+
+
+    SQL VS NOSQL
+
+    SQL==>SYMMETRY
+    IF DATA IS STRUCTURED GO WITH STRUCTURED
+    IT IS CALLED TABULAR FORMAT
+RollNo | Hindi | English
+  1    |   80  |  
+  2    |       |  70
+  3    |   86  |  
+3 spaces are wasting in sql.
+
+NOSQL==>NO WASTING OF MEMORY==>UNSYMMETRY
+IT IS CALLED JSON FORMAT==>MONGODB IS A NO SQL
+[
+    {
+        "ROll_No":"1",
+        "Hindi":"80",
+    },
+    {
+         "ROll_No":"2",
+        "English":"70",
+    },
+     {
+         "ROll_No":"3",
+        "Hindi":"80",
+    },
+]
+
+SQL             NOSQL(MONGODB)
+DATABASE        DATABASE
+TABLE           COLLECTION
+ROW             DOCUMENT
+SELECT QUERY    FIND
+INSERT          INSERT
+UPDATE          UPDATE
+DELETE          REMOVE
+
+
+CRUD OPERATION(4 OPERATIONS)
+C-CREATE  >POST
+R-READ  >GET
+U-UPDATE  >PUT/PATCH
+D-DELETE  >DELETE/REMOVE
+
+////////
+command to see all databases
+>>show dbs ==>in client terminal
+>admin 
+>config
+>local
+
+
+//Go inside db
+>use dbname
+
+//to see the collection
+>show collections
+
+//to find the data
+>db.collectionname.find()
+
+//to arrange the data
+>db.collectionname.find().pretty()
+>>at one time it shows 20 records==>type it to see next 20 records
+
+database is only craeted when it have a collection && collection will only create when it have a document
+
+
+//to create new database
+>use database name
+
+//to delete database
+>open db
+>db.dropDatabase()
+
+//to insert document
+db.user.insert({name:'Satheesh'})
+db.user.insert({name:'Dan'})
+
+> db.user.find()
+{ "_id" : ObjectId("629601fb42653caa5de81a41"), "name" : "satheesh" }
+>
+_id >each value has some unique identifier
+(primary key)
+>default value is ObjectId
+>12Bytes
+>5bytes ==>random numbers
+>3bytes==>series
+>4bytes==>timestamp
+
+TO GIVE YOUR ID VALUE
+db.user.insert({_id:1,name:'Pyhton'})
+
+> show collections
+user
+> db.user.find()
+{ "_id" : ObjectId("629601fb42653caa5de81a41"), "name" : "satheesh" }
+{ "_id" : ObjectId("6296039e42653caa5de81a42"), "name" : "dan" }
+{ "_id" : 1, "name" : "ptyhon" }
+
+
+//if we use same _id if cannot added
+
+Either go with only objectID or your own ID==>any one
+
+//it is unstructured
+db.user.insert({_id:2,name:'java',exp:'6months'})
+
+ db.user.insert({_id:2,name:'java',exp:'4months'})
+WriteResult({ "nInserted" : 1 })
+> show collections
+user
+> db.user.find()
+{ "_id" : ObjectId("629601fb42653caa5de81a41"), "name" : "satheesh" }
+{ "_id" : ObjectId("6296039e42653caa5de81a42"), "name" : "dan" }
+{ "_id" : 1, "name" : "ptyhon" }
+{ "_id" : 2, "name" : "java", "exp" : "4months" }
+//It us called unstructured format of data
+
+
+MULTIPLE RECORDS IN ONESTEP
+db.location.insert([{
+        "_id": "634444555666666894e",
+        "location_id": "1",
+        "location_name": "kochi",
+        "state_id": "2",
+        "state": "kerala",
+        "country_name": "India"
+    },
+    {
+        "_id": "634444555666666894f",
+        "location_id": "3",
+        "location_name": "Banglore",
+        "state_id": "4",
+        "state": "karnataka",
+        "country_name": "India"
+    },
+    {
+        "_id": "634444555666666894g",
+        "location_id": "5",
+        "location_name": "Chennai",
+        "state_id": "6",
+        "state": "Tamilnadu",
+        "country_name": "India"
+    },
+    {
+        "_id": "634444555666666894h",
+        "location_id": "7",
+        "location_name": "kolkata",
+        "state_id": "8",
+        "state": "West bengal",
+        "country_name": "India"
+    },
+    {
+        "_id": "634444555666666894i",
+        "location_id": "9",
+        "location_name": "Coimbatore",
+        "state_id": "10",
+        "state": "Tamilnadu",
+        "country_name": "India"
+    },
+])
+
+//to see data
+> db.location.find().pretty()
+{
+        "_id" : "634444555666666894e",
+        "location_id" : "1",
+        "location_name" : "kochi",
+        "state_id" : "2",
+        "state" : "kerala",
+        "country_name" : "India"
+}
+{
+        "_id" : "634444555666666894f",
+        "location_id" : "3",
+        "location_name" : "Banglore",
+        "state_id" : "4",
+        "state" : "karnataka",
+        "country_name" : "India"
+}
+{
+        "_id" : "634444555666666894g",
+        "location_id" : "5",
+        "location_name" : "Chennai",
+        "state_id" : "6",
+        "state" : "Tamilnadu",
+        "country_name" : "India"
+}
+{
+        "_id" : "634444555666666894h",
+        "location_id" : "7",
+        "location_name" : "kolkata",
+        "state_id" : "8",
+        "state" : "West bengal",
+        "country_name" : "India"
+}
+{
+        "_id" : "634444555666666894i",
+        "location_id" : "9",
+        "location_name" : "Coimbatore",
+        "state_id" : "10",
+        "state" : "Tamilnadu",
+        "country_name" : "India"
+}
+
+INSIDE MONGODB 
+THE FREE CLOUD SPACE CALLED CLUSTERS
+
+in network access ip 0.0.0.0/0
+in database access>add data base>  (add username and password)>add >atlas admin>add
+(username:test  && password:test123)
+go to datacase===>click on browse collection
+>browse collection
+>create database==>db name && collection==>mongodb && location
+>insert data >delete existing data>add datas from json file
+
+
+
+///to protect file auth key is used
+1.params
+>pass after / in url
+>compulsory if defined
+>We need to define params
+EX:
+app.get('/restaurants/:id', (req, res) => { //multiple routes
+let id=req.params.id
+res.send(id);
+    # db.collection('restaurants').find().toArray((err, result) => {
+    #     if (err) throw err;
+    #     res.send(result)
+    # })
+})
+==>the id number will be getted.
+in url==>http://localhost:11001/restaurants/2
+
+
+2.queryparams
+>after passing ? marks
+>no need to define queryparams
+>not compulsory
+
+app.get('/restaurants/:id', (req, res) => { 
+let state=req.query.state;
+console.log('state is',state);
+let id=req.params.id
+res.send(id);
+    # db.collection('restaurants').find().toArray((err, result) => {
+    #     if (err) throw err;
+    #     res.send(result)
+    # })
+})
+url==>http://localhost:11001/restaurants/2?state=delhi
+
+Important:param is compulsory && queryparam is not compulsory
+if we define the param and we didnot give it in url then it will not work 
+if we define the queryparam and we didnot give it in url then also it will  work 
+
+
+    TO GENERATE A KEY WE NEED  GO MD5HASHGENERATOR.COM AND CREATE ONE KEY
+
+    copy the key==>authkey=key generated in md5
+
+code==>app.get('/location', (req, res) => { //multiple routes
+let key = req.query.key;
+if (authkey === key) {
+    db.collection('location').find().toArray((err, result) => {
+        if (err) throw err;
+        res.send(result)
+    })
+} else {
+    res.send('unauthorized calling')
+}
+
+})
+
+//POSTMAN IS USED TO PASS THE HEADER VALUE AND SEE THE OUTPUTS
+==>now key is visible to everyone in url==>we should need to hide that
+===>to hide url ==>postman app is required==>open postman==>create account
+==>get header using datas in collection==>let key=req.header('keyname')
+//in browser we cannot pass the header we need react and pass the header instead of key
+
+FIND WITH CONDTIONS
+>db.collections.find()==>collections in zomato app==>menu mealtype restaurants locations
+output will shows the collections of restaurants
+
+>db.restaurants.find({state_id:4}).pretty()====>it will shows the datas which have state_id is 4
+>here state_id :4 is condition
+>db.restaurants.find({state_id:4,location_id:5}).pretty()==>more than one condition
+
+http://localhost:11001/restaurants?stateId=1   ==>url for state_id
+
+to get nested data 
+db.restaurants.find({"mealTypes.meal_Id":1}).pretty()
+
+TO FIND CUISINE AND COST IN DB
+>if we know the exact rate==>db.restaurants.find({cost:370}).pretty()==>it shows the data
+>if want to apply sorting(condition)=>db.restaurants.find({cost:{$gt:370}}).pretty()//greater than 370
+>if want to apply sorting(condition)=>db.restaurants.find({cost:{$lt:370}}).pretty()//lower than 370
+
+    want some range between 500 to 700==>db.restaurants.find({$and:[{cost:{$gt:200,$lt:700}]}).pretty()
+    AND ==>BOTH OF THEM
+    OR ==>ANY OF THEM
+
+    db.restaurants.find({$and:[{condition},{projection})
+    db.restaurants.find({$and:[{state_id:1},{restaurant_name:1})//to show d\datas with condition and projection
+    { "_id" : ObjectId("629754cbc3deeb1720273121"), "restaurant_name" : "Domino's Pizza" }
+{ "_id" : ObjectId("629754cbc3deeb1720273122"), "restaurant_name" : "Pandit Ji Paratha Hut" }
+{ "_id" : ObjectId("629754cbc3deeb1720273127"), "restaurant_name" : "AMA Cafe" }
+{ "_id" : ObjectId("629754cbc3deeb1720273128"), "restaurant_name" : "Street Foods By Punjab Grill" }
+{ "_id" : ObjectId("629754cbc3deeb172027312c"), "restaurant_name" : "Cafe Wink" }
+
+    ==>here in o/p _id will come default to neglecte that==>db.restaurants.find({state_id:1},{restaurant_name:1,_id:0})
+//here 0 refers to false
+    { "restaurant_name" : "Domino's Pizza" }
+    { "restaurant_name" : "Pandit Ji Paratha Hut" }
+    { "restaurant_name" : "AMA Cafe" }
+    { "restaurant_name" : "Street Foods By Punjab Grill" }
+    { "restaurant_name" : "Cafe Wink" }
+    >
+
+    to sort restaurant name and cost
+    db.restaurants.find({$and:[{cost:{$gt:360,$lt:700}}]},{restaurant_name:1,cost:1,_id:0})
+    ==>it shows the item range between 360 to 700 && with res name,cost and without id
+
+    SORTING==>1-ASCENDING,-1-DESCENDING
+    db.restaurants.find({$and:[{cost:{$gt:500,$lt:1000}}]},{_id:0,restaurant_name:1,cost:1}).pretty()
+    db.restaurants.find({$and:[{cost:{$gt:500,$lt:1000}}]},{_id:0,restaurant_name:1,cost:1}).pretty()
+    to add limits==>no of outputs to be showed
+    db.restaurants.find({cost:{$gt:700}},{_id:0,restaurant_name:1,cost:1}).sort({cost:1}).limit(4).pretty()
+    ==>skip first 4 RECORDS and to show 4 records
+    db.restaurants.find({cost:{$gt:700}},{_id:0,restaurant_name:1,cost:1}).sort({cost:1}).skip(2).limit(4).pretty()
