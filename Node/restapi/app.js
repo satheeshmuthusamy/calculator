@@ -34,8 +34,8 @@ dotenv.config();
 let port = process.env.PORT || 9870; //to run the code in heroku as well as other env's we should need to give process.env.port
 let mongo = require('mongodb');
 let MongoClient = mongo.MongoClient;
-let mongoUrl = process.env.MongoUrl; //localurl
-//let mongoUrl = process.env.MongoLiveUrl; //live url
+//let mongoUrl = process.env.MongoUrl; //localurl
+let mongoUrl = process.env.MongoLiveUrl; //live url
 let db;
 
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -199,6 +199,40 @@ app.post('/placeOrder', (req, res) => {
     })
 })
 
+app.put('/updateorder/:id', (req, res) => {
+    let oid = Number(req.params.id);
+    db.collection('orders').updateOne({ orderId: oid }, {
+        $set: {
+            "status": req.body.status,
+            "bank_name": req.body.bank_name,
+            "date": req.body.date
+        }
+    }, (err, result) => {
+        if (err) throw err;
+        res.send('order updated')
+    })
+})
+
+app.delete('/deleteOrder/:id', (req, res) => {
+    let oid = mongo.ObjectId(req.params.id)
+    db.collection('orders').remove({ _id: oid }, (err, result) => {
+        if (err) throw err;
+        res.send('Order deleted')
+    })
+})
+
+
+//menu on basis user selected ids
+app.post('/menuItems', (req, res) => {
+    if (Array.isArray(req.body)) {
+        db.collection('menu').find({ menu_id: { $in: req.body } }).toArray((err, result) => {
+            if (err) throw err;
+            res.send(result)
+        })
+    } else {
+        res.send('Invalid Input')
+    }
+})
 
 MongoClient.connect(mongoUrl, (err, client) => {
     if (err) console.log('error while connecting');
@@ -223,5 +257,8 @@ MongoClient.connect(mongoUrl, (err, client) => {
 //dotenv is used to read the port number in env file
 //It must be placed before port number
 //after this the port will run in the config environment in .env file.
+//nodemon does not restart in .env file==>it should be restarted file.
+//nodemon does not restart in .env file==>it should be restarted file.
+//nodemon does not restart in .env file==>it should be restarted file.
 //nodemon does not restart in .env file==>it should be restarted file.
 //nodemon does not restart in .env file==>it should be restarted

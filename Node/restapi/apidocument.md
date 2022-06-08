@@ -26,9 +26,10 @@
 
 //page 4
 >Menu details of selected items
-(POST)
+(POST)http://localhost:11001/menuItems
+pass[1,3,4,5]//json file
 >option to place order
-(POST)
+(POST)http://localhost:11001/placeOrder
 
 //page 5
 >List of order placed
@@ -36,7 +37,7 @@
 >list of order placed of perticular user
 (GET)http://localhost:11001/orders?satheeshsathish1234@gmail.com
 >update order status
-(PUT)
+(PUT)http://localhost:11001/updateorder/1
 ////other api's
 >Delete order
-(DELETE)
+(DELETE)http://localhost:11001/updateorder/1

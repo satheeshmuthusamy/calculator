@@ -396,3 +396,18 @@ TO FIND CUISINE AND COST IN DB
     db.restaurants.find({cost:{$gt:700}},{_id:0,restaurant_name:1,cost:1}).sort({cost:1}).limit(4).pretty()
     ==>skip first 4 RECORDS and to show 4 records
     db.restaurants.find({cost:{$gt:700}},{_id:0,restaurant_name:1,cost:1}).sort({cost:1}).skip(2).limit(4).pretty()
+
+    //update order in mongodb//
+    set==>to update,unset==>to delete
+    db.orders.update({_id:987878},
+    {
+        $set:{
+                "status":"tax_successfull",
+                "bank_name":"canara"
+        }
+    }
+    )
+
+
+    ///make live url//Deployment
+    login to heroku.com
