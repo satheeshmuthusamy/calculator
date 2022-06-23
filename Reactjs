@@ -1,0 +1,51 @@
+/////Step to Generate React APP///////
+> Go inside the folder using cmd
+> npx create-react-app appname
+
+////To Run
+> Go inside folder
+> npm start
+
+///react package
+>main lib provides all features
+
+///react-dom
+>helps to render the content 
+
+//react-Scripts
+>helps to run the a
+
+//jsx-javascript xml ==>it returns html
+
+///////////
+# Class
+> Logical Component
+> help to call api, write logic as well as display Contnent
+> Can maintain State
+# Function
+> Dumb Components
+> Display Content
+> Cannot Maintain State
+
+
+> HooksComponent
+
+///////
+State
+> act like a local variable
+> every component can have its own state
+> state is mutable (we can update the value)
+> Scope of the state will be in same component
+Props
+> to pass the data from child to parent or vice versa
+> props are immutable
+
+
+parent > child (props)
+child > parent (props with function)
+
+function add(a.b){
+    return a+b
+}
+
+add(1,2)
