@@ -1,0 +1,44 @@
+import React, { Fragment, Component } from 'react';
+//Inheritence==>Component
+class Header extends Component{
+        render(){
+
+            const mystyle={
+                header:{
+                    backgroundColor:'tomato'
+                },
+                logo:{
+                    textAlign:'center',
+                    fontSize:'30px',
+                    color:'white'
+                }
+            }
+            return ( 
+                    <Fragment>
+                        <header style={mystyle.header}>
+                            <div style={mystyle.logo}>Satheesh M Developer</div>
+                        
+                        <center>
+                            <input/>
+                            <div style={{color:'white',fontSize:'25px'}}>User text here</div>
+                       
+                        </center>
+                        </header>
+                        <hr/>
+                    </Fragment>
+                )
+        }
+    }
+    export default Header;
+    // const Header = () => {
+    //     return ( 
+    //         <Fragment>
+
+//         <center>
+//         <h1>Satheesh M Developer</h1>
+//         </center>
+//         <hr/>
+//         </Fragment>
+//     )
+// }
+

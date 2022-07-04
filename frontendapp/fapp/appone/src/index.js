@@ -1,21 +1,20 @@
-import React from 'react';
-// import Header from 'Header';
-// import Footer from 'Footer';
-import ReactDOM from 'react-dom/client';
+import React from 'react';  
+import ReactDOM from 'react-dom/client'; 
+import Home from './component/Home';
+// import Footer from './Footer';
+// import Header from './component/Header';
 
-// function Hello(props) {
-//     return <h1 > Hello World! < /h1>;
-// }
-const Home = () => {
-    return ( <
-        div >
-        <
-        h1 > Hai from React app < /h1>    <
-        h2 > Code file < /h2>
-</div>
-    )
-}
+// const Home = () => { return (
 
-const container = document.getElementById("root");
-const root=ReactDOM.createRoot(container);
-root.render( < Home / > );
+//     <>
+//     <Header />
+//     <center>
+//         <h1> Hello World! </h1>
+//         <h2>Hello from react</h2>
+//     </center>
+//     <Footer />
+//     </>
+// ) } 
+const container = document.getElementById("root"); 
+const root=ReactDOM.createRoot(container); 
+root.render(<Home/>);

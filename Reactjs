@@ -22,6 +22,9 @@
 > Logical Component
 > help to call api, write logic as well as display Contnent
 > Can maintain State
+>classes donot return anything==>it have a method called render and it will return everything
+
+
 # Function
 > Dumb Components
 > Display Content
@@ -36,6 +39,7 @@ State
 > every component can have its own state
 > state is mutable (we can update the value)
 > Scope of the state will be in same component
+
 Props
 > to pass the data from child to parent or vice versa
 > props are immutable
@@ -49,3 +53,81 @@ function add(a.b){
 }
 
 add(1,2)
+
+To avoid DIVS in js code
+1.use empty spaces instead of div==>cant give classes or ids=>only wrapping==>in Index.js
+2.In footer use <React.Fragment></React.Fragment>==>React=>object,Fragment=>property in React
+3.Use Fragment instead of React Fragment in {Fragment} in Import==>import React,{Fragment} from 'react';
+In Div use <Fragment>
+***Either use any one of the method to avoid divs.
+
+///To reduce the size of Index.js create component folder inside src folder and move all js files except index.js
+>create home.js and copy paste all the code in index.js file 
+
+Rules==>Should not import by small letter.==>EX=>header instead if Header It will not throw error but Can't run on the browser.
+It will confuse weather it is import name or HTML tag name So the component name will start in Capital letter.
+
+STYLING IN JSX
+
+>1.INLINE=>  <div style={{color:'orange',fontSize:'25px'}}>User text here</div>
+2.internal
+3.external
+
+#stats
+>Acts like local variables
+>Every component has its own state
+>state is mutable==>we can update the values
+>scope of state will be in same component
+
+#Props
+>props is a way to transfer the date.(or pass the data from child to parent or parent to child)
+>Props are immutable==>we cannot update value
+EX:In Home.js file Home become parent and Header and Footer become child(always not same its a way to represent)
+>It all depend upon how we write.
+Ex=>pre defined properties 
+>  <img src=""/>==>src attribute is
+>  <a href=""></a>==>href
+parent>child Use {props}
+Child>parent==>use props with function
+
+#DATABINDING//passing data from parent to child
+> <h3> &copy;SatheeshM {props.year}</h3>
+> {props.year}===we can bind data using {props.propsname}
+>We can pass any type of data and any number of datas
+
+#CONSTRUCTOR
+>Its the first thing that gets called in program or loaded in a program.
+
+#updating the state
+ handleChange=(event)=>{
+        // console.log(event.target.value)
+        console.log('Inside event handler')
+        this.setState({keyword:event.target.value})
+       
+    }
+
+ 1.Constructor=>only load once when we open the website
+ 2.I>event handler==>when we change the state it will call the render and update the value
+ 2.II>render()   
+
+
+TERNARY OPERATOR:to print the text if there is no input
+         this.setState({keyword:event.target.value?event.target.value:'User text here'})
+
+
+Any data Interaction will done only through State.
+FUnction component cannot make a state
+#Use class component
+
+
+#ROUTING5
+required package
+react-router-dom@5/3/0
+
+In routing 5
+History==>redirection
+location==>Query param=>search
+match==>params
+
+#Routing6
+we cannot use class components in routing 6==>Functional components only
