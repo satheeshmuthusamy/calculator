@@ -131,3 +131,32 @@ match==>params
 
 #Routing6
 we cannot use class components in routing 6==>Functional components only
+We should need to add routes in the routing file
+for loading the page we need main component page
+The Main will contain Outlet
+We should need to install npm packages for the Routing6 inncluding bootstrap@6.3.0 and jquery@3.6.1
+
+Zomato App
+Using routing 5
+create new folder using npx create-react-app zomatoapp
+npm packages ==>react-router-dom@5.3.0
+In header file we should need to use class component because we should need to add lot of logics
+
+api calling method on page load
+#LIFECYCLE METHOD
+componentDidMount={}
+
+on page load the constructor will work
+1.constructor()
+2.render()
+3.componentDidMount()
+Whenever the state update the component will re-render.
+
+api calling
+componentDidMount(){
+                fetch(url,{method: 'GET'})
+                .then((res)=>res.json())
+                .then((data)=>{
+                    this.setState({location: data})
+                })
+            }

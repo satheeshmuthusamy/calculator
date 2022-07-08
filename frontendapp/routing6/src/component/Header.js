@@ -11,16 +11,16 @@ class Header extends Component{
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <Link className="navbar-brand" href="#">SHIFT CODER</Link>
+    <Link className="navbar-brand" to="Home">SHIFT CODER</Link>
   <ul className="navbar-nav">
     <li className="nav-item">
-      <Link to="/"  className="nav-link" >Home</Link>
+      <Link to="Home"  className="nav-link" >Home</Link>
     </li>
    <li className="nav-item">
-     <Link to="/Post" className="nav-link">Post</Link>
+     <Link to="Post" className="nav-link">Post</Link>
     </li>
     <li className="nav-item">
-     <Link to="/Profile"  className="nav-link" >Profile</Link>
+     <Link to="Profile"  className="nav-link" >Profile</Link>
     </li>
    
   </ul>

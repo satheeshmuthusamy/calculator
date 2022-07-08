@@ -86,22 +86,17 @@ app.get('/mealType', (req, res) => {
     })
     //to get a required state we can use query params//
 app.get('/restaurants', (req, res) => {
-    let stateId = Number(req.query.stateId); //lets pass the state id in url
-    let mealId = Number(req.query.mealId);
-    // let cuisineId = Number(req.query.cuisineId);
-    //what ever is comming from the url is string
-    let query = {}; //empty query
+    let stateId = Number(req.query.stateId)
+    let mealId = Number(req.query.mealId)
+    let query = {}
     if (stateId && mealId) {
-        query = { state_id: stateId, "mealTypes.meal_Id": mealId }
+        query = { state_id: stateId, 'mealTypes.mealtype_id': mealId }
     } else if (stateId) {
         query = { state_id: stateId }
+    } else if (mealId) {
+        query = { 'mealTypes.mealtype_id': mealId }
     }
-    // else if (mealId) {
-    //     query = { "mealTypes.meal_Id": mealId }
-    // } else if (cuisineId) {
-    //     query = { cuisine_id: cuisineId }
-    // }
-    db.collection('restaurants').find().toArray((err, result) => {
+    db.collection('restaurants').find(query).toArray((err, result) => {
         if (err) throw err;
         res.send(result)
     })

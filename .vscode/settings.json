@@ -1,4 +1,7 @@
 {
     "editor.fontSize": 13,
-    "editor.suggestFontSize": 3
+    "editor.suggestFontSize": 14,
+    "git.ignoreLimitWarning": true,
+    "editor.inlayHints.fontSize": 8,
+    "editor.codeLensFontSize": 8
 }

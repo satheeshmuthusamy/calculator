@@ -1,0 +1,29 @@
+#footer {
+    height: 120px;
+    width: 100%;
+    border: 4px groove none;
+    background-color: #e92461;
+    margin-top: 4%;
+}
+
+#foottext {
+    text-align: center;
+}
+
+.footDiv {
+    height: 66px;
+    width: 33%;
+    border-right: 2px solid black;
+    margin-top: -1%;
+    float: left;
+    text-align: center;
+}
+
+.footDiv>p {
+    margin-left: 2%;
+}
+
+.noborder {
+    border: none;
+    float: right;
+}
