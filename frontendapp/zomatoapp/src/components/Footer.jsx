@@ -7,15 +7,15 @@ const Footer =()=>{
             <hr/>
             <p id="foottext">&copy;Zomato</p>
             <hr/>
-            <div class="footDiv">
+            <div className="footDiv">
                 <p>contact us</p>
                 <p>About us</p>
             </div>
-            <div class="footDiv">
+            <div className="footDiv">
                 <p>contact us</p>
                 <p>About us</p>
             </div>
-            <div class="footDiv noborder">
+            <div className="footDiv noborder">
                 <p>contact us</p>
                 <p>About us</p>
             </div>

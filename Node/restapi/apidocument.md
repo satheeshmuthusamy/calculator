@@ -10,15 +10,15 @@
 >>(LIVE)https://foodwebpag.herokuapp.com/restaurants?stateId=1
 >List of QuickSerach
 >> (GET)http://localhost:11001/mealtype
->>(LIVE)https://foodwebpag.herokuapp.com/restaurants?mealtype
+>>(LIVE)https://foodwebpag.herokuapp.com/mealType
 
 //page 2
 >List of restaurents basics of mealType
->>(GET)http://localhost:11001/restaurants?mealType
->>(LIVE)https://foodwebpag.herokuapp.com/restaurants?restaurants?mealType
+>>(GET)http://localhost:11001/restaurants
+>>(LIVE)https://foodwebpag.herokuapp.com/restaurants
 >Filter on basis of cuisine
 >> (GET)http://localhost:11001/filter/1?cuisineId=2 
->>(LIVE)https://foodwebpag.herokuapp.com/restaurants?restaurants?filter/1?cuisineId=2
+>>(LIVE)https://foodwebpag.herokuapp.com/filter/1?cuisineId=2
 >Filter on basis of cost
 >> (GET)http://localhost:11001/filter/1?lcost=700&hcost=1200 
 >>(LIVE)https://foodwebpag.herokuapp.com/filter/1?lcost=700&hcost=1200

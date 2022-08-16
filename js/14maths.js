@@ -29,7 +29,7 @@ Math.ceil(10.2)
 Math.ceil(12.9)
 13
 
-//to get random numser without decimal
+//to get random number without decimal
 Math.ceil(Math.random()*10)
 1
 Math.ceil(Math.random()*1000)

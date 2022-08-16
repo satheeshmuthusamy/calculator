@@ -1,5 +1,7 @@
 import React,{Component} from 'react';
 import './search.css';
+import {withRouter} from 'react-router-dom';
+//to access the props from parent component (or) pass the props from parent to child component
 
 const url="https://foodwebpag.herokuapp.com/location";
 const restUrl="https://foodwebpag.herokuapp.com/restaurants";
@@ -20,6 +22,11 @@ class Search extends Component{
                 )
             })
         }
+    }
+
+    handleRest=(event)=>{
+        const restId=event.target.value
+        this.props.history.push(`/details?restId=${restId}`)
     }
 
     renderRest = (data) => {
@@ -43,6 +50,8 @@ class Search extends Component{
     }
 
     render(){
+        console.log("search>>",this.props);
+        //to see the props data is the history is available or not
         return(
             <div id="search">
             <div id="logo">
@@ -58,7 +67,7 @@ class Search extends Component{
                    {this.renderCity(this.state.location)}
                   
                </select> 
-               <select className="restSelect">
+               <select className="restSelect"onChange={this.handleRest}>
                 <option >-----SELECT YOUR RESTAURENT-----</option>
                 {this.renderRest(this.state.restaurants)}
                
@@ -79,4 +88,4 @@ class Search extends Component{
 }
     
     
-export default Search;
+export default withRouter(Search);

@@ -1,7 +1,7 @@
 /*quicksearchcss*/
 
 #quicksearch {
-    height: 940px;
+    /* height: 940px; */
     width: 80%;
     border: 4px dotted none;
     margin-left: 10%;
@@ -23,7 +23,7 @@
     font-size: 40px;
 }
 
-#quicksubHeading {
+#quickSubHeading {
     font-size: 20px;
     color: #2e8b63;
     display: block;
@@ -36,9 +36,9 @@
     width: 30%;
     box-shadow: 0px 5px 27px black;
     display: inline-block;
-    margin-left: 2%;
+    margin-left: 3%;
     margin-top: 2%;
-    background-color: #f77d096b;
+    background-color: #FFFFFF;
     /* animation:dance 10s infinite;(for continuous dancing ) */
 }
 
@@ -89,14 +89,14 @@
 
 .componentHeading {
     color: rgb(236, 183, 84);
-    font-size: 24px;
-    margin-top: 0%;
-    margin-left: 10%;
+    font-size: 2rem;
+    margin-top: -3%;
+    margin-left: 0%;
 }
 
 .componentsubHeading {
     color: rgb(2, 12, 12);
-    font-size: 20px;
+    font-size: 1rem;
     margin-top: 5%;
     margin-left: 10%;
 }

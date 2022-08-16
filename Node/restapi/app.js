@@ -34,8 +34,8 @@ dotenv.config();
 let port = process.env.PORT || 9870; //to run the code in heroku as well as other env's we should need to give process.env.port
 let mongo = require('mongodb');
 let MongoClient = mongo.MongoClient;
-//let mongoUrl = process.env.MongoUrl; //localurl
-let mongoUrl = process.env.MongoLiveUrl; //live url
+let mongoUrl = process.env.MongoUrl; //localurl
+//let mongoUrl = process.env.MongoLiveUrl; //live url
 let db;
 
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -73,16 +73,10 @@ app.get('/location', (req, res) => { //multiple routes
     })
 })
 app.get('/mealType', (req, res) => {
-        if (auth(req.header('basicauth'))) {
-            db.collection('mealType').find().toArray((err, result) => {
-                if (err) throw err;
-                res.send(result)
-            })
-        } else {
-            res.send('unauthorized calling')
-
-        }
-
+        db.collection('mealType').find().toArray((err, result) => {
+            if (err) throw err;
+            res.send(result)
+        })
     })
     //to get a required state we can use query params//
 app.get('/restaurants', (req, res) => {
@@ -196,7 +190,7 @@ app.post('/placeOrder', (req, res) => {
 
 app.put('/updateorder/:id', (req, res) => {
     let oid = Number(req.params.id);
-    db.collection('orders').updateOne({ orderId: oid }, {
+    db.collection('orders').updateOne({ id: oid }, {
         $set: {
             "status": req.body.status,
             "bank_name": req.body.bank_name,

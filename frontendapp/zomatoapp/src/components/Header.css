@@ -1,47 +1,20 @@
-#header {
-    height: 60px;
-    width: 100%;
-    border: 2px solid none;
-    background-color: #e92461;
-    text-align: center;
-    padding: 20px;
-    /* text-shadow: 2px 2px 5px whitesmoke; */
-    color: whitesmoke;
+.h1 {
+    width: 68%;
+   
 }
-
-#login {
-    width: 60%;
-    height: 91%;
-    /* border: 2px solid black; */
-    margin-left: 260%;
-    margin-top: -42%;
-    /* transform:rotate(360deg); */
+.header1{
+width:100%;
+height: 36px;
 }
-
-
-/* #old{
-    width: 100%;
-    height: 50%;
-    border: 2px solid black;
+.panel-1{
+    width:28%;
+    display:inline;
+    float:right;
+    margin-top:-10px;
 }
-#new{
-    width: 100%;
-    height: 50%;
-    border: 2px solid black;
+/* .btn-1 {
+    margin-left: 60%;
 } */
-
-#icon {
-    float: left;
-    margin-left: 45%;
-    margin-top: -1%;
-    font-size: 20px;
-}
-
-#social {
-    float: right;
-}
-
-.slogo {
-    height: 50px;
-    width: 50px;
-}
+/* .btnlogin{
+width:30%;
+} */
